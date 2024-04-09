@@ -36,7 +36,7 @@
                 required>
             </div>
             <div class="mb-4">
-              <span>Altura de D (m): </span>
+              <span>Altura en D (m): </span>
               <input type="text" v-model="form.heightD"
                 class="border-blue-500 rounded-lg shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required>
@@ -51,15 +51,15 @@
       </div>
 
       <!-- Resultado -->
-      <div class=" max-w-xs mx-auto bg-blue-200 shadow-md rounded-lg overflow-hidden">
-        <div v-show="isResultVisible" class="p-5">
-          <p class=" flex text-lg font-semibold text-blue-800">Resultados</p>
-          <span>Energía cinética en A: <strong>{{ resultEnergyA }}</strong></span> <br>
+        <div v-show="isResultVisible" class="p-4 max-w-xs mx-auto bg-blue-200 shadow-md rounded-lg overflow-hidden">
+          <p class=" flex text-lg font-semibold text-blue-800">Resultados generales</p>
+          <span>Energía cinética en A y B: <strong>{{ resultEnergyA }}</strong></span> <br>
           <span>trabajo de Froz BC: <strong>{{ resultEnergyBC }}</strong></span> <br>
-          <span>Energía mecanica C y D: <strong>{{ resultEnergyC }}</strong></span> <br>
+          <span>Energía en mecanica C y D: <strong>{{ resultEnergyC }}</strong></span> <br>
+          <span class="flex text-lg font-semibold text-blue-800">Resultado al ejercicio</span>
           <span>Rapidez en D: <strong>{{ resultVelocityD }}</strong></span>
         </div>
-      </div>
+      <>
 
 
       <div>

@@ -3,5 +3,5 @@
 @tailwind utilities;
 .bordered-body {
     border: 3px solid blue;
-    margin: 10px; /* Ajusta este valor según la separación deseada */
+    margin: 30px; /* Ajusta este valor según la separación deseada */
   }
