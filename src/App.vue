@@ -1,6 +1,6 @@
 <template>
-  <div  class=" bordered-body border-blue-500 mt-5  border rounded py-2 px-3 flex flex-col items-center justify-center">
-    <h1 class="text-xl font-bold">Trabajo y Energía (Jairo MM |George RT)</h1>
+  <div class="bordered-body border-blue-500 mt-5  border rounded py-2 px-3 flex flex-col items-center justify-center">
+    <h1 class="text-xl font-bold">Trabajo y Energía (Jairo MM | George RT)</h1>
     <div class="w-[80%] mb-4">
       <div class="mb-4">
         <span class="">
@@ -11,7 +11,7 @@
       </div>
 
       <!-- Crear dos columnas para el form y la imagen -->
-      <div class="flex justify-center border p-2 rounded">
+      <div class="flex justify-center border p-2 m-2 rounded">
         <div class="w-[55%]">
           <form @submit.prevent="calculateVelocity">
             <div class="mb-4">
@@ -20,25 +20,25 @@
             <div class="mb-4">
               <span>Masa de la partícula (kg): </span>
               <input type="text" v-model="form.particleMass"
-                class="border-blue-500 rounded-lg shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                class="border-blue-500 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required>
             </div>
             <div class="mb-4">
               <span>Rapidez en A (m/s): </span>
               <input type="text" v-model="form.velocityA"
-                class="border-blue-500 rounded-lg shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                class="border-blue-500 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required>
             </div>
             <div class="mb-4">
               <span>Disipación en BC (%): </span>
               <input type="text" v-model="form.dissipation"
-                class="border-blue-500 rounded-lg shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                class="border-blue-500 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required>
             </div>
             <div class="mb-4">
               <span>Altura en D (m): </span>
               <input type="text" v-model="form.heightD"
-                class="border-blue-500 rounded-lg shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                class="border-blue-500 shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 required>
             </div>
             <button type="submit"
@@ -54,17 +54,11 @@
         <div v-show="isResultVisible" class="p-4 max-w-xs mx-auto bg-blue-200 shadow-md rounded-lg overflow-hidden">
           <p class=" flex text-lg font-semibold text-blue-800">Resultados generales</p>
           <span>Energía cinética en A y B: <strong>{{ resultEnergyA }}</strong></span> <br>
-          <span>trabajo de Froz BC: <strong>{{ resultEnergyBC }}</strong></span> <br>
-          <span>Energía en mecanica C y D: <strong>{{ resultEnergyC }}</strong></span> <br>
+          <span>Trabajo de Froz BC: <strong>{{ resultEnergyBC }}</strong></span> <br>
+          <span>Energía mecanica en C y D: <strong>{{ resultEnergyC }}</strong></span> <br>
           <span class="flex text-lg font-semibold text-blue-800">Resultado al ejercicio</span>
           <span>Rapidez en D: <strong>{{ resultVelocityD }}</strong></span>
         </div>
-      
-
-
-      <div>
-        <!-- Katex -->
-      </div>
     </div>
   </div>
 </template>
@@ -123,4 +117,5 @@ const calculateVelocity = () => {
   isResultVisible.value = true;
 };
 </script>
+
 <style scoped></style>
