@@ -47,7 +47,7 @@
       <div v-show="isResultVisible" class="mt-4">
         <span>Energía cinética en A: <strong>{{ resultEnergyA }}</strong></span> <br>
         <span>Energía cinética en BC: <strong>{{ resultEnergyBC }}</strong></span> <br>
-        <span>Energía cinética en D: <strong>{{ resultEnergyD }}</strong></span> <br>
+        <span>Energía cinética en D: <strong>{{ resultEnergyC }}</strong></span> <br>
         <span>Rapidez en D: <strong>{{ resultVelocityD }}</strong></span>
       </div>
 
@@ -64,7 +64,7 @@ import { ref } from 'vue';
 const resultVelocityD = ref<string>('');
 const resultEnergyA = ref<string>('');
 const resultEnergyBC = ref<string>('');
-const resultEnergyD = ref<string>('');
+const resultEnergyC = ref<string>('');
 
 const isResultVisible = ref<boolean>(false);
 
@@ -90,23 +90,25 @@ const calculateVelocity = () => {
   const kineticEnergyA = 0.5 * Number(form.value.particleMass) * Math.pow(Number(form.value.velocityA), 2);
   resultEnergyA.value = ` ${kineticEnergyA.toFixed(2)} J.`;
 
-  // Calcular la energía cinética al final del tramo BC.
-  const kineticEnergyBC = kineticEnergyA * (1 - Number(form.value.dissipation) / 100);
-  resultEnergyBC.value = ` ${kineticEnergyBC.toFixed(2)} J.`;
+  // Energía cinética en B
+  const kineticEnergyB = kineticEnergyA;
 
-  // Calcular la energía cinética final en el punto D.
-  const gravity:number = 9.81;
-  const kineticEnergyD = kineticEnergyBC + Number(form.value.particleMass) * gravity * Number(form.value.heightD);
-  resultEnergyD.value = ` ${kineticEnergyD.toFixed(2)} J.`;
+  // Calculando la fricción en el tramo BC
+  const frictionBC = kineticEnergyB * (Number(form.value.dissipation) / 100);
+  resultEnergyBC.value = ` ${frictionBC.toFixed(2)} J.`;
 
-  // Calcular la energía mecánica total en el punto D.
-  const mechanicalEnergyD = kineticEnergyBC + kineticEnergyD;
+  // Calculando la energía mecánica en C
+  const mechanicalEnergyC = kineticEnergyB - frictionBC;
+  resultEnergyC.value = ` ${mechanicalEnergyC.toFixed(2)} J.`;
 
-  // Determinar la rapidez de la partícula en el punto D.
-  const velocityD = Math.sqrt(2 * mechanicalEnergyD / Number(form.value.particleMass));
+  const valueGravity = 10;
+
+  // Hallando la velocidad en C
+  const velocityC = Math.sqrt(2 * Number(mechanicalEnergyC) / Number(form.value.particleMass) - 2 * valueGravity * Number(form.value.heightD));
+
 
   // Mostrar el resultado
-  resultVelocityD.value = ` ${velocityD.toFixed(2)} m/s.`;
+  resultVelocityD.value = ` ${velocityC.toFixed(2)} m/s.`;
 
   isResultVisible.value = true;
 };
