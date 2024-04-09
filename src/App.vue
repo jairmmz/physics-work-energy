@@ -1,6 +1,6 @@
 <template>
   <div  class=" bordered-body border-blue-500 mt-5  border rounded py-2 px-3 flex flex-col items-center justify-center">
-    <h1 class="text-xl font-bold">Trabajo y Energía (Jairo MM |george RT)</h1>
+    <h1 class="text-xl font-bold">Trabajo y Energía (Jairo MM |George RT)</h1>
     <div class="w-[80%] mb-4">
       <div class="mb-4">
         <span class="">
