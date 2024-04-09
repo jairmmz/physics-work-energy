@@ -59,7 +59,7 @@
           <span class="flex text-lg font-semibold text-blue-800">Resultado al ejercicio</span>
           <span>Rapidez en D: <strong>{{ resultVelocityD }}</strong></span>
         </div>
-      <>
+      
 
 
       <div>
