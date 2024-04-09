@@ -1,5 +1,5 @@
 # TRABAJO Y ENERGÍA - FÍSICA I
-<span>![</span><span>EJERCICIO DE TRABAJO Y ENERGÍA</span><span>]</span><span>(</span><span>https://github.com/jairmmz/physics-work-energy/blob/master/src/assets/image_work_energy.png?raw=true</span><span>)</span>
+<span>![</span><span>EJERCICIO DE TRABAJO Y ENERGÍA</span><span>]</span><span>(</span><span>https://github.com/jairmmz/physics-work-energy/blob/master/src/assets/image_work_energy.png</span><span>)</span>
 
 ## INTEGRANTES
 
