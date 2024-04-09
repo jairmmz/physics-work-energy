@@ -1,9 +1,8 @@
-# Vue 3 + TypeScript + Vite
+# TRABAJO Y ENERGÍA - FÍSICA I
+<span>![</span><span>EJERCICIO DE TRABAJO Y ENERGÍA</span><span>]</span><span>(</span><span>https://github.com/jairmmz/physics-work-energy/blob/master/src/assets/image_work_energy.png?raw=true</span><span>)</span>
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## INTEGRANTES
 
-## Recommended Setup
+- GEORGE STYFF ROSALES TINTAYA
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
-
-- Use [vue-tsc](https://github.com/vuejs/language-tools/tree/master/packages/tsc) for performing the same type checking from the command line, or for generating d.ts files for SFCs.
+- JAIRO MUÑOZ MIRANDA
